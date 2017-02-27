@@ -1,0 +1,31 @@
+<h1>Movies</h1>
+
+<h3>Total Movies: {{movies.length}}</h3>
+
+<button class="btn btn-primary" role="button" (click)="getMovies()" title="refresh">
+  <span class="glyphicon glyphicon-refresh" aria-hidden="true"></span> Refresh
+</button>
+
+<div class="row">
+  <div class="col-sm-6 col-md-4" *ngFor="let movie of movies">
+    <div class="thumbnail">
+      <img src="{{movie.cover}}" alt="{{movie.title}}">
+      <button class="btn btn-primary delete-button" role="button" (click)="removeMovie(movie.imdbId)" title="remove">
+        <span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
+      <div class="caption">
+        <h3>{{movie.title}}</h3>
+
+        <p>
+          Description: {{movie.description}}
+        </p>
+
+        <p>
+          Release Date: {{movie.release}}<br/>
+          Rating: {{movie.rating}}
+        </p>
+
+        <p><a target="_blank" href="http://www.imdb.com/title/{{movie.imdbId}}/" class="btn btn-primary" role="button">Open IMDB</a></p>
+      </div>
+    </div>
+  </div>
+</div>
