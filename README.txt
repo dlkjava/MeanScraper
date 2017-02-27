@@ -19,6 +19,16 @@ http://localhost:3000/
 
 
 Step 3:
+Find IMDB Movie Ids from IMDB.com (see below for some samples)
+
+
+Step 4:
+Enter IMDB Movie Id into the input field and then click the Scrape button
+NOTE: movie will be added to the /data folder of the file system and to a remote mongo database
+
+
+Step 5:
+Click the Refresh button to see all of the movies that have been added to the remote database
 
 
 
